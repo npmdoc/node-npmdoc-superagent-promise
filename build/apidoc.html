@@ -61,12 +61,149 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.superagent-promise">module superagent-promise</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.superagent-promise.superagent-promise">
+            function <span class="apidocSignatureSpan"></span>superagent-promise
+            <span class="apidocSignatureSpan">(superagent, Promise)</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.superagent-promise" id="apidoc.module.superagent-promise">module superagent-promise</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.superagent-promise.superagent-promise" id="apidoc.element.superagent-promise.superagent-promise">
+        function <span class="apidocSignatureSpan"></span>superagent-promise
+        <span class="apidocSignatureSpan">(superagent, Promise)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrap(superagent, Promise) {
+<span class="apidocCodeCommentSpan">  /**
+   * Request object similar to superagent.Request, but with end() returning
+   * a promise.
+   */
+</span>  function PromiseRequest() {
+    superagent.Request.apply(this, arguments);
+  }
+
+  // Inherit form superagent.Request
+  PromiseRequest.prototype = Object.create(superagent.Request.prototype);
+
+  /** Send request and get a promise that `end` was emitted */
+  PromiseRequest.prototype.end = function(cb) {
+    var _end = superagent.Request.prototype.end;
+    var self = this;
+
+    return new Promise(function(accept, reject) {
+      _end.call(self, function(err, response) {
+        if (cb) {
+          cb(err, response);
+        }
+
+        if (err) {
+          err.response = response;
+          reject(err);
+        } else {
+          accept(response);
+        }
+      });
+    });
+  };
+
+  /** Provide a more promise-y interface */
+  PromiseRequest.prototype.then = function(resolve, reject) {
+    var _end = superagent.Request.prototype.end;
+    var self = this;
+
+    return new Promise(function(accept, reject) {
+      _end.call(self, function(err, response) {
+        if (err) {
+          err.response = response;
+          reject(err);
+        } else {
+          accept(response);
+        }
+      });
+    }).then(resolve, reject);
+  };
+
+  /**
+   * Request builder with same interface as superagent.
+   * It is convenient to import this as `request` in place of superagent.
+   */
+  var request = function(method, url) {
+    return new PromiseRequest(method, url);
+  };
+
+  /** Helper for making an options request */
+  request.options = function(url) {
+    return request(&#x27;OPTIONS&#x27;, url);
+  }
+
+  /** Helper for making a head request */
+  request.head = function(url, data) {
+    var req = request(&#x27;HEAD&#x27;, url);
+    if (data) {
+      req.send(data);
+    }
+    return req;
+  };
+
+  /** Helper for making a get request */
+  request.get = function(url, data) {
+    var req = request(&#x27;GET&#x27;, url);
+    if (data) {
+      req.query(data);
+    }
+    return req;
+  };
+
+  /** Helper for making a post request */
+  request.post = function(url, data) {
+    var req = request(&#x27;POST&#x27;, url);
+    if (data) {
+      req.send(data);
+    }
+    return req;
+  };
+
+  /** Helper for making a put request */
+  request.put = function(url, data) {
+    var req = request(&#x27;PUT&#x27;, url);
+    if (data) {
+      req.send(data);
+    }
+    return req;
+  };
+
+  /** Helper for making a patch request */
+  request.patch = function(url, data) {
+    var req = request(&#x27;PATCH&#x27;, url);
+    if (data) {
+      req.send(data);
+    }
+    return req;
+  };
+
+  /** Helper for making a delete request */
+  request.del = function(url) {
+    return request(&#x27;DELETE&#x27;, url);
+  };
+
+  // Export the request builder
+  return request;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 

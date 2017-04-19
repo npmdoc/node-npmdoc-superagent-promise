@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/lightsofapollo/superagent-promise#readme"
-
-    >superagent-promise (v1.1.0)</a>
+    <a href="https://github.com/lightsofapollo/superagent-promise#readme">superagent-promise (v1.1.0)</a>
 </h1>
 <h4>superagent promise wrapper</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.superagent-promise">module superagent-promise</a><ol>
 
@@ -145,12 +138,12 @@
 
   /** Helper for making an options request */
   request.options = function(url) {
-    return request(&#x27;OPTIONS&#x27;, url);
+    return request('OPTIONS', url);
   }
 
   /** Helper for making a head request */
   request.head = function(url, data) {
-    var req = request(&#x27;HEAD&#x27;, url);
+    var req = request('HEAD', url);
     if (data) {
       req.send(data);
     }
@@ -159,7 +152,7 @@
 
   /** Helper for making a get request */
   request.get = function(url, data) {
-    var req = request(&#x27;GET&#x27;, url);
+    var req = request('GET', url);
     if (data) {
       req.query(data);
     }
@@ -168,7 +161,7 @@
 
   /** Helper for making a post request */
   request.post = function(url, data) {
-    var req = request(&#x27;POST&#x27;, url);
+    var req = request('POST', url);
     if (data) {
       req.send(data);
     }
@@ -177,7 +170,7 @@
 
   /** Helper for making a put request */
   request.put = function(url, data) {
-    var req = request(&#x27;PUT&#x27;, url);
+    var req = request('PUT', url);
     if (data) {
       req.send(data);
     }
@@ -186,7 +179,7 @@
 
   /** Helper for making a patch request */
   request.patch = function(url, data) {
-    var req = request(&#x27;PATCH&#x27;, url);
+    var req = request('PATCH', url);
     if (data) {
       req.send(data);
     }
@@ -195,7 +188,7 @@
 
   /** Helper for making a delete request */
   request.del = function(url) {
-    return request(&#x27;DELETE&#x27;, url);
+    return request('DELETE', url);
   };
 
   // Export the request builder
@@ -213,3 +206,4 @@
     ]
 </div>
 </div>
+</body></html>

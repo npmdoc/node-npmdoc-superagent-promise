@@ -1,9 +1,14 @@
-# api documentation for  [superagent-promise (v1.1.0)](https://github.com/lightsofapollo/superagent-promise#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-superagent-promise.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-superagent-promise) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-superagent-promise.svg)](https://travis-ci.org/npmdoc/node-npmdoc-superagent-promise)
+# npmdoc-superagent-promise
+
+#### api documentation for  [superagent-promise (v1.1.0)](https://github.com/lightsofapollo/superagent-promise#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-superagent-promise.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-superagent-promise) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-superagent-promise.svg)](https://travis-ci.org/npmdoc/node-npmdoc-superagent-promise)
+
 #### superagent promise wrapper
 
-[![NPM](https://nodei.co/npm/superagent-promise.png?downloads=true)](https://www.npmjs.com/package/superagent-promise)
+[![NPM](https://nodei.co/npm/superagent-promise.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/superagent-promise)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-superagent-promise/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-superagent-promise_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-superagent-promise/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-superagent-promise/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-superagent-promise/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-superagent-promise/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-superagent-promise/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-superagent-promise/build/screenCapture.npmPackageListing.svg)
 
@@ -50,25 +55,20 @@
     "main": "index.js",
     "maintainers": [
         {
-            "name": "lights-of-apollo",
-            "email": "james@lightsofapollo.com"
+            "name": "lights-of-apollo"
         },
         {
-            "name": "jonasfj",
-            "email": "jopsen@gmail.com"
+            "name": "jonasfj"
         },
         {
-            "name": "gregarndt",
-            "email": "garndt@mozilla.com"
+            "name": "gregarndt"
         },
         {
-            "name": "clayreimann",
-            "email": "clayreimann@gmail.com"
+            "name": "clayreimann"
         }
     ],
     "name": "superagent-promise",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git://github.com/lightsofapollo/superagent-promise.git"
@@ -79,16 +79,6 @@
     "version": "1.1.0"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module superagent-promise](#apidoc.module.superagent-promise)
-
-
-
-# <a name="apidoc.module.superagent-promise"></a>[module superagent-promise](#apidoc.module.superagent-promise)
 
 
 
